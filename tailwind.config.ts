@@ -72,7 +72,7 @@ module.exports = {
         },
         'animar-cursor': {
           '0%': {
-            color: 'rgb(124 58 237)',
+            color: 'rgb(59 130 246)',
           },
           '100%': {
             color: 'rgba(0,0,0,0)',

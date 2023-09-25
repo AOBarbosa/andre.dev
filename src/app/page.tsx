@@ -3,6 +3,7 @@
 import { Code2 } from 'lucide-react'
 import { TypingWritter } from '@/components/TypingWritter'
 import { NavMenu } from '@/components/NavMenu'
+import { Button } from '@/components/ui/button'
 
 export default function Home() {
   return (
@@ -18,13 +19,15 @@ export default function Home() {
           <h1 className="font-bold">
             <TypingWritter content="Hello, i'm" showCursor />
 
-            <span className="text-5xl text-purple-600">
+            <span className="text-5xl text-blue-500">
               <TypingWritter content="André Barbosa" delay={1300} showCursor />
             </span>
 
             <TypingWritter content="a Front-end Developer" delay={2800} />
           </h1>
         </div>
+
+        <Button>Clink me</Button>
       </main>
     </div>
   )
