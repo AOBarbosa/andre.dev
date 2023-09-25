@@ -15,7 +15,12 @@ module.exports = {
         '2xl': '1400px',
       },
     },
+
     extend: {
+      width: {
+        main: '75rem',
+      },
+
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -65,10 +70,19 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
         },
+        'animar-cursor': {
+          '0%': {
+            color: 'rgb(124 58 237)',
+          },
+          '100%': {
+            color: 'rgba(0,0,0,0)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'animar-cursor': 'animar-cursor .8s infinite',
       },
     },
   },
