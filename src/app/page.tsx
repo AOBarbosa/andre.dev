@@ -3,32 +3,57 @@
 import { Code2 } from 'lucide-react'
 import { TypingWritter } from '@/components/TypingWritter'
 import { NavMenu } from '@/components/NavMenu'
-import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { Separator } from '@/components/ui/separator'
 
 export default function Home() {
   return (
-    <div className="w-full h-full px-40 flex-col items-center justify-center">
-      <nav className="w-full h-full flex flex-row justify-between items-center">
-        <Code2 className="w-12 h-12" />
+    <div className="w-full h-full px-40 flex flex-col items-center justify-center gap-10">
+      <nav className="w-full h-20 px-4 flex flex-row justify-between items-center ">
+        <Link
+          href="/"
+          className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+        >
+          <Code2 className="w-14 h-14" />
+        </Link>
 
         <NavMenu />
       </nav>
 
-      <main>
-        <div className="h-full w-full text-3xl">
-          <h1 className="font-bold">
-            <TypingWritter content="Hello, i'm" showCursor />
+      <main className="">
+        <div className="flex flex-col gap-4">
+          <div className="h-full w-full text-5xl">
+            <h1 className="font-bold w-122 h-44">
+              <TypingWritter content="Hello, i'm" showCursor />
 
-            <span className="text-5xl text-blue-500">
-              <TypingWritter content="André Barbosa" delay={1300} showCursor />
-            </span>
+              <span className="text-7xl text-blue-500">
+                <TypingWritter
+                  content="André Barbosa"
+                  delay={1300}
+                  showCursor
+                />
+              </span>
 
-            <TypingWritter content="a Front-end Developer" delay={2800} />
-          </h1>
+              <TypingWritter
+                content="Front-end Developer"
+                delay={2800}
+                showCursor
+              />
+            </h1>
+          </div>
+
+          <span className="text-xl text-gray-400 h-8">
+            <TypingWritter
+              content="Transforming your ideas into code"
+              delay={4800}
+            />
+          </span>
         </div>
-
-        <Button>Clink me</Button>
       </main>
+
+      <Separator className="w-full" />
+
+      <div>hello</div>
     </div>
   )
 }

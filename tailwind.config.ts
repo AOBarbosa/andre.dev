@@ -18,7 +18,11 @@ module.exports = {
 
     extend: {
       width: {
-        main: '75rem',
+        126: '31.5rem',
+      },
+
+      height: {
+        54.5: '13.625rem',
       },
 
       colors: {

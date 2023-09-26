@@ -33,7 +33,7 @@ const setup: { title: string; href: string; description: string }[] = [
   {
     title: 'Setup',
     href: '/',
-    description: 'All the equipment I use in my daily life.',
+    description: 'All the equipments I use in my daily life.',
   },
   {
     title: 'Stack',
@@ -47,7 +47,9 @@ export function NavMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>About</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-lg">
+            About
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-96 gap-3 p-4">
               {about.map((about) => (
@@ -64,7 +66,9 @@ export function NavMenu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Setup</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-lg">
+            Setup
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="w-96 gap-3 p-4">
               {setup.map((setup) => (
@@ -82,7 +86,9 @@ export function NavMenu() {
 
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink
+              className={`${navigationMenuTriggerStyle()} text-lg`}
+            >
               Contact
             </NavigationMenuLink>
           </Link>
