@@ -5,6 +5,7 @@ import { TypingWritter } from '@/components/TypingWritter'
 import { NavMenu } from '@/components/NavMenu'
 import Link from 'next/link'
 import { Separator } from '@/components/ui/separator'
+import { ContactCard } from '@/components/ContactCard'
 
 export default function Home() {
   return (
@@ -53,7 +54,7 @@ export default function Home() {
 
       <Separator className="w-full" />
 
-      <div>hello</div>
+      <ContactCard />
     </div>
   )
 }

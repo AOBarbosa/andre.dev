@@ -86,10 +86,8 @@ export function NavMenu() {
 
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink
-              className={`${navigationMenuTriggerStyle()} text-lg`}
-            >
-              Contact
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <span className="text-lg">Contact</span>
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
