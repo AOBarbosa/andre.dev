@@ -24,7 +24,10 @@ export default function Home() {
       <main className="">
         <div className="flex flex-col gap-4">
           <div className="h-full w-full text-5xl">
-            <h1 className="font-bold w-122 h-44">
+            <h1
+              data-testid="presentation-text"
+              className="font-bold w-122 h-44"
+            >
               <TypingWritter content="Hello, i'm" showCursor />
 
               <span className="text-7xl text-blue-500">
@@ -43,7 +46,10 @@ export default function Home() {
             </h1>
           </div>
 
-          <span className="text-xl text-gray-400 h-8">
+          <span
+            data-testid="presentation-description"
+            className="text-xl text-gray-400 h-8"
+          >
             <TypingWritter
               content="Transforming your ideas into code"
               delay={4800}
