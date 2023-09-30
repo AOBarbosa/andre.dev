@@ -4,7 +4,6 @@ import * as React from 'react'
 import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
-// import { Icons } from '@/components/icons'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -18,12 +17,12 @@ import {
 const about: { title: string; href: string; description: string }[] = [
   {
     title: 'Me',
-    href: '/',
+    href: '/about/me',
     description: 'Learn a bit more about me and what I do.',
   },
   {
     title: 'Projects',
-    href: '/',
+    href: '/about/projects',
     description:
       'All the projects I have been developing throughout my journey.',
   },
@@ -103,8 +102,8 @@ const ListItem = React.forwardRef<
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
-          ref={ref}
+        <Link
+          href={`/${ref}`}
           className={cn(
             'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
             className,
@@ -115,7 +114,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   )
