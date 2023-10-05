@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} w-screen h-full px-40 flex flex-col items-center justify-center gap-10`}
+        className={`${inter.className} w-2xl h-full px-40 flex flex-col items-center justify-center gap-10`}
       >
         <nav className="w-full h-20 px-4 flex flex-row justify-between items-center ">
           <Link
@@ -37,9 +37,9 @@ export default function RootLayout({
 
         {children}
 
-        <Separator className="w-full" />
+        <Separator decorative className="w-full" />
 
-        <ContactCard />
+        <ContactCard className="mb-8" />
       </body>
     </html>
   )
