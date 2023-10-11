@@ -20,6 +20,8 @@ import {
   TooltipContent,
 } from '@radix-ui/react-tooltip'
 
+import { EmailDialog } from './EmailDialog'
+
 type CardProps = React.ComponentProps<typeof Card>
 
 export function ContactCard({ className, ...props }: CardProps) {
@@ -31,6 +33,7 @@ export function ContactCard({ className, ...props }: CardProps) {
           If you have any project ideas in mind or wish to have a conversation,
           please feel free to contact me.
         </CardDescription>
+        <EmailDialog />
       </CardHeader>
 
       <Separator />

@@ -23,6 +23,7 @@ export default function AbouteMe() {
         </Avatar>
 
         <div className="">
+          <h1>My name is André de Oliveira Barbosa</h1>
           <p className="text-justify">
             A technology enthusiast front-end developer, constantly seeking new
             challenges to enhance my skills and deepen my knowledge. Currently,
@@ -125,7 +126,7 @@ export default function AbouteMe() {
                 ReactJS: tests with Jest and Testing Library
               </Link>
               <Link
-                href="https://www.rocketseat.com.br/ignite"
+                href="https://www.alura.com.br/"
                 className="text-sm text-zinc-400 hover:text-zinc-300"
               >
                 by Alura
@@ -140,7 +141,7 @@ export default function AbouteMe() {
                 React: integration Tests and Mocks on the Front-end
               </Link>
               <Link
-                href="https://www.rocketseat.com.br/ignite"
+                href="https://www.alura.com.br/"
                 className="text-sm text-zinc-400 hover:text-zinc-300"
               >
                 by Alura
@@ -155,7 +156,7 @@ export default function AbouteMe() {
                 Swift Fundamentals
               </Link>
               <Link
-                href="https://www.rocketseat.com.br/ignite"
+                href="https://www.alura.com.br/"
                 className="text-sm text-zinc-400 hover:text-zinc-300"
               >
                 by Alura
