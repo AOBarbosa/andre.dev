@@ -1,6 +1,7 @@
 'use client'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import { Skeleton } from '@/components/ui/skeleton'
 import { User } from 'lucide-react'
@@ -103,65 +104,78 @@ export default function AbouteMe() {
           <div className="w-full h-full flex flex-col gap-4">
             <h1 className="text-2xl font-bold">Certificates</h1>
 
-            <div className="flex flex-col">
-              <Link
-                href="https://app.rocketseat.com.br/certificates/1c22816e-7b79-48c4-ba95-a88947d9a937"
-                className="w-full text-center text-lg font-bold hover:text-blue-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-              >
-                ReactJS and NextJs
-              </Link>
-              <Link
-                href="https://www.rocketseat.com.br/ignite"
-                className="text-sm text-zinc-400 hover:text-zinc-300"
-              >
-                by Rocketseat
-              </Link>
-            </div>
-
-            <div className="flex flex-col">
-              <Link
-                href="https://cursos.alura.com.br/certificate/1834a8d8-df60-4074-928d-c1971c0bf7dc?lang=en"
-                className="w-full text-center text-lg font-bold hover:text-blue-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-              >
-                ReactJS: tests with Jest and Testing Library
-              </Link>
-              <Link
-                href="https://www.alura.com.br/"
-                className="text-sm text-zinc-400 hover:text-zinc-300"
-              >
-                by Alura
-              </Link>
-            </div>
-
-            <div className="flex flex-col">
-              <Link
-                href="https://cursos.alura.com.br/certificate/e4a46924-5239-4bcc-8c9d-06856937333a?lang=en"
-                className="w-full text-center text-lg font-bold hover:text-blue-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-              >
-                React: integration Tests and Mocks on the Front-end
-              </Link>
-              <Link
-                href="https://www.alura.com.br/"
-                className="text-sm text-zinc-400 hover:text-zinc-300"
-              >
-                by Alura
-              </Link>
-            </div>
-
-            <div className="flex flex-col">
-              <Link
-                href="https://cursos.alura.com.br/certificate/a18c3692-f65c-4649-b98e-ce2e28595713?lang=en"
-                className="w-full text-center text-lg font-bold hover:text-blue-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
-              >
-                Swift Fundamentals
-              </Link>
-              <Link
-                href="https://www.alura.com.br/"
-                className="text-sm text-zinc-400 hover:text-zinc-300"
-              >
-                by Alura
-              </Link>
-            </div>
+            <ScrollArea>
+              <div className="flex flex-col">
+                <Link
+                  href="https://app.rocketseat.com.br/certificates/1c22816e-7b79-48c4-ba95-a88947d9a937"
+                  className="w-full text-center text-lg font-bold hover:text-blue-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                >
+                  ReactJS and NextJs
+                </Link>
+                <Link
+                  href="https://www.rocketseat.com.br/ignite"
+                  className="text-sm text-zinc-400 hover:text-zinc-300"
+                >
+                  by Rocketseat
+                </Link>
+              </div>
+              <div className="flex flex-col">
+                <Link
+                  href="https://cursos.alura.com.br/certificate/1834a8d8-df60-4074-928d-c1971c0bf7dc?lang=en"
+                  className="w-full text-center text-lg font-bold hover:text-blue-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                >
+                  ReactJS: tests with Jest and Testing Library
+                </Link>
+                <Link
+                  href="https://www.alura.com.br/"
+                  className="text-sm text-zinc-400 hover:text-zinc-300"
+                >
+                  by Alura
+                </Link>
+              </div>
+              <div className="flex flex-col">
+                <Link
+                  href="https://cursos.alura.com.br/certificate/e4a46924-5239-4bcc-8c9d-06856937333a?lang=en"
+                  className="w-full text-center text-lg font-bold hover:text-blue-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                >
+                  React: integration Tests and Mocks on the Front-end
+                </Link>
+                <Link
+                  href="https://www.alura.com.br/"
+                  className="text-sm text-zinc-400 hover:text-zinc-300"
+                >
+                  by Alura
+                </Link>
+              </div>
+              <div className="flex flex-col">
+                <Link
+                  href="https://cursos.alura.com.br/certificate/a18c3692-f65c-4649-b98e-ce2e28595713?lang=en"
+                  className="w-full text-center text-lg font-bold hover:text-blue-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                >
+                  Swift Fundamentals
+                </Link>
+                <Link
+                  href="https://www.alura.com.br/"
+                  className="text-sm text-zinc-400 hover:text-zinc-300"
+                >
+                  by Alura
+                </Link>
+              </div>
+              <div className="flex flex-col">
+                <Link
+                  href="https://cursos.alura.com.br/certificate/dd483bd6-6a6e-4e1b-9563-d7f4325a2393?lang=en"
+                  className="w-full text-center text-lg font-bold hover:text-blue-400 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                >
+                  OOP with Swift
+                </Link>
+                <Link
+                  href="https://www.alura.com.br/"
+                  className="text-sm text-zinc-400 hover:text-zinc-300"
+                >
+                  by Alura
+                </Link>
+              </div>
+            </ScrollArea>
           </div>
         </div>
       </div>

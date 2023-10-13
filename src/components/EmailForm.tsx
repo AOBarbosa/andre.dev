@@ -1,11 +1,9 @@
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from './ui/button'
@@ -14,6 +12,7 @@ import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { toast } from './ui/use-toast'
+import { Textarea } from './ui/textarea'
 
 const sendEmailFormSchema = z.object({
   firstName: z.string({ required_error: 'This field is required' }),
@@ -32,13 +31,6 @@ const sendEmailFormSchema = z.object({
 export function EmailForm() {
   const form = useForm<z.infer<typeof sendEmailFormSchema>>({
     resolver: zodResolver(sendEmailFormSchema),
-    // defaultValues: {
-    //   firstName: '',
-    //   lastName: '',
-    //   email: '',
-    //   phoneNumber: '',
-    //   message: '',
-    // },
   })
 
   function onSubmit(data: z.infer<typeof sendEmailFormSchema>) {
@@ -113,7 +105,11 @@ export function EmailForm() {
             <FormItem>
               <FormLabel>Message</FormLabel>
               <FormControl>
-                <Input placeholder="Inform your message" {...field} />
+                <Textarea
+                  className="resize-none"
+                  placeholder="Inform your message"
+                  {...field}
+                />
               </FormControl>
             </FormItem>
           )}
