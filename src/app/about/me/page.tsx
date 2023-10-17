@@ -83,7 +83,7 @@ export default function AbouteMe() {
 
         <div className="flex justify-around w-full h-64 gap-10 items-center text-sm">
           <div className="w-full h-full flex flex-col gap-4">
-            <h1 className="text-2xl font-bold">Academics</h1>
+            <h1 className="text-blue-400 text-2xl font-bold">Academics</h1>
 
             <div className="flex flex-col">
               <Link
@@ -102,7 +102,7 @@ export default function AbouteMe() {
           <Separator orientation="vertical" decorative />
 
           <div className="w-full h-full flex flex-col gap-4">
-            <h1 className="text-2xl font-bold">Certificates</h1>
+            <h1 className="text-blue-400 text-2xl font-bold">Certificates</h1>
 
             <ScrollArea>
               <div className="flex flex-col">

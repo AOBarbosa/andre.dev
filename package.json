@@ -11,6 +11,7 @@
     "test:watch": "jest --watchAll"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@hookform/resolvers": "^3.3.1",
     "@phosphor-icons/react": "github:phosphor-icons/react",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -35,9 +36,11 @@
     "next-router-mock": "^0.9.10",
     "phosphor-react": "^1.4.1",
     "postcss": "8.4.30",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.47.0",
+    "react-lottie-player": "^1.5.5",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",

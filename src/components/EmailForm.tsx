@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Form,
   FormControl,
@@ -8,11 +10,16 @@ import {
 import { Input } from '@/components/ui/input'
 import { Button } from './ui/button'
 
+import Lottie from 'react-lottie-player'
+import sendEmailAnimation from '../lottie/senEmailAnimation.json'
+
 import * as z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { toast } from './ui/use-toast'
 import { Textarea } from './ui/textarea'
+import { FormEvent } from 'react'
+import emailjs from '@emailjs/browser'
 
 const sendEmailFormSchema = z.object({
   firstName: z.string({ required_error: 'This field is required' }),
@@ -28,24 +35,42 @@ const sendEmailFormSchema = z.object({
     .max(280, { message: 'Must be 280 or fewer characters long' }),
 })
 
+type SendEmailFormData = z.infer<typeof sendEmailFormSchema>
+
 export function EmailForm() {
-  const form = useForm<z.infer<typeof sendEmailFormSchema>>({
+  const form = useForm<SendEmailFormData>({
     resolver: zodResolver(sendEmailFormSchema),
   })
 
-  function onSubmit(data: z.infer<typeof sendEmailFormSchema>) {
-    toast({
-      title: 'You submitted the following values:',
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    })
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    try {
+      await emailjs.sendForm(
+        'service_gqb6qdn',
+        'template_d1ybjn8',
+        event.currentTarget,
+        'gA0rJLmZnCIp2z3ii',
+      )
+
+      toast({
+        title: 'Sua mensagem foi enviada com sucesso!',
+        description: (
+          <Lottie
+            loop={false}
+            animationData={sendEmailAnimation}
+            play
+            style={{ width: 144, height: 144 }}
+          />
+        ),
+      })
+    } catch (error: any) {
+      console.log(error.text)
+    }
   }
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={onSubmit} className="space-y-8">
         <FormField
           control={form.control}
           name="firstName"
