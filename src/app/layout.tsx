@@ -23,14 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} w-2xl h-full px-40 flex flex-col items-center justify-center gap-10`}
+        className={`${inter.className} w-2xl h-full px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-center justify-center gap-10`}
       >
-        <nav className="w-full h-20 px-4 flex flex-row justify-between items-center ">
+        <nav className="w-full h-full flex flex-row justify-between items-center ">
           <Link
             href="/"
             className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-blue-500"
           >
-            <Code2 className="w-14 h-14" />
+            <Code2 className="w-10 sm:w-14 h-10 sm:h-14" />
           </Link>
 
           <NavMenu />
