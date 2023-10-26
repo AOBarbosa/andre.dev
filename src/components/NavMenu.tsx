@@ -46,11 +46,11 @@ export function NavMenu() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base sm:text-lg">
+          <NavigationMenuTrigger className="text-base xs:text-lg">
             About
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="md:w-80 md:gap-2 md:p-3 lg:w-96 lg:gap-3 lg:p-4">
+            <ul className="md:w-80 md:gap-2 p-2 lg:w-96 lg:gap-3 lg:p-4">
               {about.map((about) => (
                 <ListItem
                   key={about.title}
@@ -65,11 +65,11 @@ export function NavMenu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-base sm:text-lg">
+          <NavigationMenuTrigger className="text-base xs:text-lg">
             Setup
           </NavigationMenuTrigger>
           <NavigationMenuContent className="w-full">
-            <ul className="md:w-80 md:gap-2 md:p-3 lg:w-96 lg:gap-3 lg:p-4">
+            <ul className="md:w-80 md:gap-2 p-2 lg:w-96 lg:gap-3 lg:p-4">
               {setup.map((setup) => (
                 <ListItem
                   key={setup.title}
@@ -86,7 +86,7 @@ export function NavMenu() {
         <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <span className="text-base sm:text-lg">Contact</span>
+              <span className="text-base xs:text-lg">Contact</span>
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

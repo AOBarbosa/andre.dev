@@ -7,8 +7,8 @@ export default function Home() {
     <div>
       <main>
         <div className="flex flex-col gap-4">
-          <div className="h-full w-full text-5xl">
-            <h1
+          <div className="h-72 xs:h-full xs:w-full text-5xl">
+            <div
               data-testid="presentation-text"
               className="font-bold w-122 h-44"
             >
@@ -27,12 +27,12 @@ export default function Home() {
                 delay={2800}
                 showCursor
               />
-            </h1>
+            </div>
           </div>
 
           <span
             data-testid="presentation-description"
-            className="text-xl text-gray-400 h-8"
+            className="text-xl text-gray-400 h-8 w-full"
           >
             <TypingWritter
               content="Transforming your ideas into code"

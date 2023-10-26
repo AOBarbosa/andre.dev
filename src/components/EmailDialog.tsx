@@ -14,7 +14,7 @@ import { EmailForm } from './EmailForm'
 export function EmailDialog() {
   return (
     <Dialog>
-      <DialogTrigger className="w-3/12" asChild>
+      <DialogTrigger className="w-32" asChild>
         <Button variant="outline">Contact me</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">

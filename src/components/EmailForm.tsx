@@ -20,6 +20,7 @@ import { toast } from './ui/use-toast'
 import { Textarea } from './ui/textarea'
 import { FormEvent } from 'react'
 import emailjs from '@emailjs/browser'
+import { Toaster } from './ui/toaster'
 
 const sendEmailFormSchema = z.object({
   firstName: z.string({ required_error: 'This field is required' }),
@@ -142,6 +143,7 @@ export function EmailForm() {
 
         <Button type="submit">Submit</Button>
       </form>
+      <Toaster />
     </Form>
   )
 }
