@@ -10,7 +10,7 @@ import Link from 'next/link'
 export default function AbouteMe() {
   return (
     <div className="flex flex-col gap-16">
-      <div className="flex flex-row items-center justify-between gap-16">
+      <div className="flex flex-col mm:flex-row items-center gap-16">
         <Avatar className="w-96 h-96">
           <AvatarImage
             src="https://github.com/AOBarbosa.png"
