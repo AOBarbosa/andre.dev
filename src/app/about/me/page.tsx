@@ -23,7 +23,7 @@ export default function AbouteMe() {
           </AvatarFallback>
         </Avatar>
 
-        <div className="">
+        <div className="px-2">
           <h1>My name is André de Oliveira Barbosa</h1>
           <p className="text-justify">
             A technology enthusiast front-end developer, constantly seeking new

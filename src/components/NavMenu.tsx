@@ -30,14 +30,14 @@ const about: { title: string; href: string; description: string }[] = [
 
 const setup: { title: string; href: string; description: string }[] = [
   {
-    title: 'Setup',
-    href: '/',
-    description: 'All the equipments I use in my daily life.',
+    title: 'Stack',
+    href: '/setup/stack',
+    description: 'The technologies I use as a developer.',
   },
   {
-    title: 'Stack',
-    href: '/',
-    description: 'The technologies I use as a developer.',
+    title: 'Setup',
+    href: '/setup',
+    description: 'All the equipments I use in my daily life.',
   },
 ]
 
@@ -64,7 +64,7 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger className="text-base xs:text-lg">
             Setup
           </NavigationMenuTrigger>
@@ -81,6 +81,14 @@ export function NavMenu() {
               ))}
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem> */}
+
+        <NavigationMenuItem>
+          <Link href="/setup/stack" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <span className="text-base xs:text-lg">Stack</span>
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>

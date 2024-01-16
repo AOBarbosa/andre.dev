@@ -13,12 +13,12 @@ describe('Navigation Menu', () => {
 
     // Act
     const aboutLink = screen.getByText('About')
-    const setupLink = screen.getByText('Setup')
+    // const setupLink = screen.getByText('Setup')
     const contactLink = screen.getByText('Contact')
 
     // Assert
     expect(aboutLink).toBeInTheDocument()
-    expect(setupLink).toBeInTheDocument()
+    // expect(setupLink).toBeInTheDocument()
     expect(contactLink).toBeInTheDocument()
   })
 
@@ -43,6 +43,17 @@ describe('Navigation Menu', () => {
 
       fireEvent.click(link)
       expect(mockRouter.asPath).toEqual('/about/projects')
+    })
+
+    it('renders the Contact page', () => {
+      render(<NextLink href="/about/contact">Contact</NextLink>, {
+        wrapper: MemoryRouterProvider,
+      })
+
+      const link = screen.getByText('Contact')
+
+      fireEvent.click(link)
+      expect(mockRouter.asPath).toEqual('/about/contact')
     })
   })
 })

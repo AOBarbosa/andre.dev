@@ -6,6 +6,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Button } from './ui/button'
@@ -23,16 +24,16 @@ import emailjs from '@emailjs/browser'
 import { Toaster } from './ui/toaster'
 
 const sendEmailFormSchema = z.object({
-  firstName: z.string({ required_error: 'This field is required' }),
-  lastName: z.string({ required_error: 'This field is required' }),
-  email: z
-    .string({ required_error: 'This field is required' })
-    .email({ message: 'Invalid email address' }),
-  phoneNumber: z
-    .string({ required_error: 'This field is required' })
-    .length(11, 'O número deve conter 11 dígitos'),
+  firstName: z
+    .string()
+    .min(3, { message: 'O nome precisa ter, pelo menos, 3 caracteres.' }),
+  lastName: z
+    .string()
+    .min(3, { message: 'O nome precisa ter, pelo menos, 3 caracteres.' }),
+  email: z.string().email({ message: 'Endereço de email inválido.' }),
+  phoneNumber: z.string().length(11, 'O número deve conter 11 dígitos'),
   message: z
-    .string({ required_error: 'This field is required' })
+    .string()
     .max(280, { message: 'Must be 280 or fewer characters long' }),
 })
 
@@ -81,6 +82,7 @@ export function EmailForm() {
               <FormControl>
                 <Input placeholder="Inform your first name" {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -94,6 +96,7 @@ export function EmailForm() {
               <FormControl>
                 <Input placeholder="Inform your last name" {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -107,6 +110,7 @@ export function EmailForm() {
               <FormControl>
                 <Input placeholder="Inform your e-mail" {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -120,6 +124,7 @@ export function EmailForm() {
               <FormControl>
                 <Input placeholder="Inform your phone number" {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -137,6 +142,7 @@ export function EmailForm() {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
