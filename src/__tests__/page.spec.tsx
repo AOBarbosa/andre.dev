@@ -1,10 +1,10 @@
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Home from '../app/page'
 
 // Função utilitária para adicionar um atraso no teste
-function delay(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms))
-}
+// function delay(ms: number) {
+//   return new Promise((resolve) => setTimeout(resolve, ms))
+// }
 
 describe('Home', () => {
   describe('Presentation section', () => {

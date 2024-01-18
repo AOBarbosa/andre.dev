@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Code2 } from 'lucide-react'
 import { ContactCard } from '@/components/ContactCard'
 import { Separator } from '@/components/ui/separator'
-import { Toaster } from '@/components/ui/toaster'
+// import { Toaster } from '@/components/ui/toaster'
 
 const inter = Inter({ subsets: ['latin'] })
 
